@@ -119,6 +119,7 @@ Blockly.Blocks["axios_getpost"] = {
         "MODE"
       )
       .appendField("链接");
+    this.appendValueInput("PARAMS").setCheck(null).appendField("请求参数");
     this.appendValueInput("HEAD").setCheck(null).appendField("请求头");
     this.appendValueInput("BODY").setCheck(null).appendField("请求体");
     this.appendStatementInput("OK").setCheck(null).appendField("当返回结果时");

@@ -1030,16 +1030,6 @@
         },
         {
           "kind": "BLOCK",
-          "blockxml": "<block type=\"axios_getpost_simple\"></block>",
-          "type": "axios_getpost_simple"
-        },
-        {
-          "kind": "BLOCK",
-          "blockxml": "<block type=\"axios_response\"></block>",
-          "type": "axios_response"
-        },
-        {
-          "kind": "BLOCK",
           "blockxml": "<block type=\"axios_responsedropdown\"></block>",
           "type": "axios_responsedropdown"
         },

@@ -32,7 +32,7 @@ toolboxConfig["contents"].forEach(function (category) {
     });
   } else {
     console.warn(
-      "This category is empty. ",
+      "积木盒"+category+"是空的",
       "If you are using a custom approach, ",
       "please list all possible blocks in contents for a unified format."
     );

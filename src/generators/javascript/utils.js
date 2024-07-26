@@ -36,3 +36,9 @@ javascriptGenerator.forBlock["utils_isnative"] = function () {
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, javascriptGenerator.ORDER_NONE];
 };
+
+javascriptGenerator.forBlock["utils_get_widget_image_url"] = function () {
+  var value_name = javascriptGenerator.valueToCode(block, "NAME", javascriptGenerator.ORDER_ATOMIC);
+  var code = `utils.getWidgetImageUrl(${value_name})`;
+  return [code, javascriptGenerator.ORDER_NONE];
+};

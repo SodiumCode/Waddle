@@ -221,7 +221,7 @@ const spaceChange = () => {
   top: 0;
 }
 
-.blocklyMainBackground{
-  stroke-width:0;
+.blocklyMainBackground {
+  stroke-width: 0;
 }
 </style>

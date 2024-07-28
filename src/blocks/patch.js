@@ -9,11 +9,15 @@ import toolboxConfig from "../toolbox/toolbox.json";
  */
 export function block_style(name, style) {
   // https://groups.google.com/g/blockly/c/byDoKnftEcc/m/qbaF9M8vBAAJ
-  const savedIfInit = Blockly.Blocks[name].init;
-  Blockly.Blocks[name].init = function () {
-    savedIfInit.bind(this)();
-    this.setStyle(style);
-  };
+  try {
+    const savedIfInit = Blockly.Blocks[name].init;
+    Blockly.Blocks[name].init = function () {
+      savedIfInit.bind(this)();
+      this.setStyle(style);
+    };
+  } catch (e) {
+    console.werror("Blockly.Blocks[" + name + "]未定义，请检查积木盒")
+  }
 }
 
 // 摘取积木栏配置信息，自动生成补丁
@@ -28,7 +32,7 @@ toolboxConfig["contents"].forEach(function (category) {
     });
   } else {
     console.warn(
-      "This category is empty. ",
+      "积木盒"+category+"是空的",
       "If you are using a custom approach, ",
       "please list all possible blocks in contents for a unified format."
     );

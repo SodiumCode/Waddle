@@ -7,9 +7,8 @@ import { fileURLToPath, URL } from "url";
 import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 import { viteStaticCopy } from "vite-plugin-static-copy";
-import { normalizePath } from 'vite'
-import path from 'node:path'
-
+import { normalizePath } from "vite";
+import path from "node:path";
 
 export default defineConfig({
   // 插件引入
@@ -28,35 +27,35 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: normalizePath(path.resolve(__dirname,"./src/icon/logo/waddle2mini.png")),
+          src: normalizePath(path.resolve(__dirname, "./src/icon/logo/waddle2mini.png")),
           dest: "./",
         },
         {
-          src: normalizePath(path.resolve(__dirname,"./src/icon/logo/favicon.ico")),
+          src: normalizePath(path.resolve(__dirname, "./src/icon/logo/favicon.ico")),
           dest: "./",
         },
         {
-          src: normalizePath(path.resolve(__dirname,"./node_modules/blockly/media/*")),
+          src: normalizePath(path.resolve(__dirname, "./node_modules/blockly/media/*")),
           dest: "media",
         },
         {
-          src: normalizePath(path.resolve(__dirname,"./src/tutorials/*")),
+          src: normalizePath(path.resolve(__dirname, "./src/tutorials/*")),
           dest: "tutorials",
         },
         {
-          src: normalizePath(path.resolve(__dirname,"./src/codespace/react.development.js")),
+          src: normalizePath(path.resolve(__dirname, "./src/codespace/react.development.js")),
           dest: "react",
         },
         {
-          src: normalizePath(path.resolve(__dirname,"./src/codespace/react-dom.development.js")),
+          src: normalizePath(path.resolve(__dirname, "./src/codespace/react-dom.development.js")),
           dest: "react",
         },
         {
-          src: normalizePath(path.resolve(__dirname,"./src/codespace/preview.html")),
+          src: normalizePath(path.resolve(__dirname, "./src/codespace/preview.html")),
           dest: "react",
         },
         {
-          src: normalizePath(path.resolve(__dirname,"./src/icon/logo/waddle2.svg")),
+          src: normalizePath(path.resolve(__dirname, "./src/icon/logo/waddle2.svg")),
           dest: "./",
         },
       ],
@@ -105,7 +104,7 @@ export default defineConfig({
             type: "image/svg+xml",
             sizes: "any",
             purpose: "any",
-          }
+          },
         ],
       },
     }),

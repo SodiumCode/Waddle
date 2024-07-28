@@ -220,4 +220,8 @@ const spaceChange = () => {
   left: 0;
   top: 0;
 }
+
+.blocklyMainBackground{
+  stroke-width:0;
+}
 </style>
